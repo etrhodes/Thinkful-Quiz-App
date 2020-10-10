@@ -1,0 +1,40 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+  background-image: url('images/batman-wallpaper.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+
+h1 {
+  font-family: 'Permanent Marker';
+  color: #FED141;
+}
+
+div {
+  background-color: #FED141;
+}
+
+div {
+  margin-top: 10px;
+}
+
+button {
+  margin: 10px;
+  background-color: black;
+  color: #FED141;
+}
+
+input {
+  margin-left: 20px;
+}
