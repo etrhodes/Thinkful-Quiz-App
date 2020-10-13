@@ -186,7 +186,7 @@ const store = {
     answersArray.forEach(answer => {
       answersHtml += `
         <div>
-          <input type="radio" name="answer" "value="${answer}" required>
+          <input type="radio" name="answer${i}" value="${answer}" required>
           <label for="answer-${i}">${answer}</label>
         </div>
       `;
@@ -265,13 +265,15 @@ const store = {
       event.preventDefault();
   
     //Set variable for correct answer.
-    let currentAnswer = store.questions[store.questionNumber].correctAnswer;
-    console.log(currentAnswer);
+    let currentAnswer = store.questions[store.questionNumber];
+    
+    //Container for selectedAnswerChoice
+
     //Grab value of selected answer.
-    let selectedAnswer = $('form input[type="radio"][name="answer"]:checked').val();
-    console.log(selectedAnswer);
+    let selectedAnswer = $('input[value]:checked').val();
+    
   
-    if (selectedAnswer === currentAnswer) {
+    if (selectedAnswer === currentAnswer.correctAnswer) {
       $('#answer-div').append(questionHtml('correct'));
       store.score++;
     }

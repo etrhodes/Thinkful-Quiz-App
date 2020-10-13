@@ -11,7 +11,7 @@
 
 body {
   background-image: url('images/batman-wallpaper.jpg');
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -19,6 +19,12 @@ body {
 h1 {
   font-family: 'Permanent Marker';
   color: #FED141;
+  margin-left: 20px;
+}
+
+h2 {
+  color: black;
+  font-family: 'Permanent Marker';
 }
 
 div {
@@ -26,7 +32,7 @@ div {
 }
 
 div {
-  margin-top: 10px;
+  padding: 15px;
 }
 
 button {
@@ -36,5 +42,9 @@ button {
 }
 
 input {
-  margin-left: 20px;
+  margin-left: 15px;
+}
+
+.score, .question-number {
+  font-family: 'Permanent Marker';
 }
