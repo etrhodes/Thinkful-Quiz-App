@@ -186,7 +186,7 @@ const store = {
     answersArray.forEach(answer => {
       answersHtml += `
         <div>
-          <input type="radio" name="answer" "value="${answer}" required>
+          <input type="radio" name="answer" value="${answer}" required>
           <label for="answer-${i}">${answer}</label>
         </div>
       `;
