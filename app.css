@@ -9,6 +9,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 body {
   background-image: url('images/batman-wallpaper.jpg');
   background-size: cover;
@@ -17,14 +19,17 @@ body {
 
 
 h1 {
+  text-align: center;
   font-family: 'Permanent Marker';
+  font-size: 50px;
   color: #FED141;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 h2 {
   color: black;
   font-family: 'Permanent Marker';
+  font-weight: lighter;
 }
 
 div {
@@ -32,7 +37,7 @@ div {
 }
 
 div {
-  padding: 15px;
+  padding: 5px;
 }
 
 button {
@@ -42,9 +47,20 @@ button {
 }
 
 input {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .score, .question-number {
   font-family: 'Permanent Marker';
 }
+
+* {
+  font-family: 'Architects Daughter';
+}
+
+.image {
+  width: 50%;
+  height: auto;
+}
+
+

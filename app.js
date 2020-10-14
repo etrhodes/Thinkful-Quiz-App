@@ -14,6 +14,7 @@ const store = {
         ],
         correctAnswer: "Bane",
         caption: "After deducing Batman’s secret identity and invading the sanctity of Wayne Manor and the Batcave, Bane not only defeated Batman, but broke his back, leaving him crippled and wheelchair-bound. Helpless, Bruce Wayne left his costume and crime-fightin duties to Jean Peal Valley and set out on an arduous quest to regain his strength and will to fight. Eventually, after much rehabilitation and training with the beautiful but deadly Lady Shiva, Wayne returned to Gotham to reclaim the mantle of the Dark Knight.",
+        image: '<img src="images/Bane.jpg"></img>',
       },
       { //Question 2
         question: "What were the names of Bruce Wayne's parents?",
@@ -25,6 +26,7 @@ const store = {
         ],
         correctAnswer: "Thomas and Martha",
         caption: "As a child, Bruce Wayne witnessed the gruesome murder of his parents, Thomas and Martha Wayne.",
+        image: '<img src="images/ThomasAndMarthaWayne.png"></img>',
       },
       { //Question 3
         question: "Who is credited with creating Batman?",
@@ -36,6 +38,7 @@ const store = {
         ],
         correctAnswer: "Bob Kane",
         caption: "Although he worked with Bill Finger on the original comics, Bob Kane is generally credited with creating the character of Batman. He was a twenty-two year old comic book artist when he was charged with the task of creating another superhero in the mold of the DC phenomenon, Superman. According to Kane, the original concept for Batman came from three sources: a Leonardo da Vinci sketch of a man trying to fly with bat-like wings, a 1930s movie titled (Italic) The Bat Whisperer, and the masked heroes of Zorro and The Shadow. Batman made his first appearance in (Italic) Detective Comics #27 (May, 1939).",
+        image: '<img src="images/Bob-Kane.jpg"></img>',
       },
       { //Question 4
         question: "Who killed Jason Todd (the second Robin)?",
@@ -47,6 +50,7 @@ const store = {
         ],
         correctAnswer: "Joker",
         caption: "For 1988’s “Batman: A Death in the Family” storyline, DC Comics held a telephone poll to determine whether or not Robin would die at the hands of the Joker. He was killed off by a margin of 72 votes (5,343 for, 5,271 against). After Jason is killed by the Joker and resurrected in the Lazarus Pit, he goes on to become the Red Hood.",
+        image: '<img src="images/red-hood.jpg"></img>',
       },
       { //Question 5
         question: "What year was the character of Robin first introduced?",
@@ -58,6 +62,7 @@ const store = {
         ],
         correctAnswer: "1940",
         caption: "Bob Kane introduced Batman’s young sidekick, Robin the Boy Wonder, in 1940 to give Batman someone to talk to. Robin made his first appearance in Detective Comics #38 (April, 1940).",
+        image: '<img src="images/original-robin.jpg"></img>',
       },
       { //Question 6
         question: "What former District Attorney became the villain known as Two-Face?",
@@ -69,6 +74,7 @@ const store = {
         ],
         correctAnswer: "Harvey Dent",
         caption: "Once an upstanding Gotham City district attorney, Harvey Dent was driven insane after a mob boss threw acidic chemicals at him during a trial, hideously scarring the left side of his face. He subsequently adopted the “Two-Face” persona, becoming a criminal obsessed with duality.",
+        image: '<img src="images/twoface.jpg"></img>',
       },
       { //Question 7
         question: "The original Batgirl was related to what familiar Batman character?",
@@ -80,6 +86,7 @@ const store = {
         ],
         correctAnswer: "Batwoman",
         caption: "The original Batgirl (first introduced in Batman #139) was Betty Kane, the niece of Batwoman (Kathy Kane). A later version of Batgirl (Barbara Gordon) was the daughter of police Commissioner James Gordon.",
+        image: '<img src="images/BatGirl-Betty-Kane.jpg"></img>',
       },
       { //Question 8
         question: "Which of these Bat-villains was introduced first?",
@@ -91,6 +98,7 @@ const store = {
         ],
         correctAnswer: "Catwoman",
         caption: "Catwoman made her first appearance in Batman #1 (Spring, 1940). The Penguin (1941), The Riddler (1948), and Mr. Freeze (1959) were all introduced later.",
+        image: '<img src="images/Catwoman.jpg"></img>',
       },
       { //Question 9
         question: "What was Alfred the butler's original family name?",
@@ -102,6 +110,7 @@ const store = {
         ],
         correctAnswer: "Beagle",
         caption: "Although Alfred’s family name has since been changed to the more dignified-sounding “Pennyworth”, when he made his first appearance in Batman #16 (April/May, 1943), his name was Alfred Beale.",
+        image: '<img src="images/Alfred.jpg"></img>',
       },
       { //Question 10
         question: "What was Bat-Hound's name?",
@@ -113,6 +122,7 @@ const store = {
         ],
         correctAnswer: "Ace",
         caption: "Ace the Bat-Hound made his first appearance in Batman #92 (June, 1955). Ace was a German shepherd found by Batman and Robin after his master was kidnapped by a gang of counterfeiters. The character was inspired by the success of Superman’s pet dog Krypto in Adventure Comics.",
+        image: '<img src="images/Ace.jpg"></img>',
       }
     ],
     quizStarted: false,
@@ -167,9 +177,10 @@ const store = {
             ${generateAnswersHtml()}
           </div>
           <button id="submit-answer">Submit Answer</button>
-          <button id="next-question">Next Question</button>
+          
         </form>
         <div id="answer-div"></div>
+        <button id="next-question">Next Question</button>
         <p class="score">Score: ${store.score} out of ${store.questions.length}.</p>
       </div>
     `;
@@ -186,7 +197,7 @@ const store = {
     answersArray.forEach(answer => {
       answersHtml += `
         <div>
-          <input type="radio" name="answer${i}" value="${answer}" required>
+          <input type="radio" name="answer" value="${answer}" required>
           <label for="answer-${i}">${answer}</label>
         </div>
       `;
@@ -201,15 +212,31 @@ const store = {
     
     if (answerStatus === 'correct') {
       html = `
-      <p>That is correct!</p>
-      <p>${store.questions[store.questionNumber].caption}</p>
+      <div>
+        <div>
+          <p>That is correct!</p>
+          <p class="image">${store.questions[store.questionNumber].image}</p>
+        </div>
+        <div>
+          <p>${store.questions[store.questionNumber].caption}</p>
+        </div>
+      </div>
       `;
     }
     else {
       html = `
-      <p>That is not correct.</p>
-      <p>The correct answer is ${store.questions[store.questionNumber].correctAnswer}.</p>
-      <p>${store.questions[store.questionNumber].caption}</p>
+      <div>
+        <div>
+          <p>That is not correct.</p>
+          <p>The correct answer is ${store.questions[store.questionNumber].correctAnswer}.</p>
+        </div>
+        <div>
+          <p class="image">${store.questions[store.questionNumber].image}</p>
+        </div>
+        <div>
+          <p>${store.questions[store.questionNumber].caption}</p>
+        </div>
+      </div>
       `
     }
       return html;
