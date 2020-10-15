@@ -13,7 +13,7 @@ const store = {
           "Killer Croc"
         ],
         correctAnswer: "Bane",
-        caption: "After deducing Batman’s secret identity and invading the sanctity of Wayne Manor and the Batcave, Bane not only defeated Batman, but broke his back, leaving him crippled and wheelchair-bound. Helpless, Bruce Wayne left his costume and crime-fightin duties to Jean Peal Valley and set out on an arduous quest to regain his strength and will to fight. Eventually, after much rehabilitation and training with the beautiful but deadly Lady Shiva, Wayne returned to Gotham to reclaim the mantle of the Dark Knight.",
+        caption: "After deducing Batman’s secret identity and invading the sanctity of Wayne Manor and the Batcave, Bane not only defeated Batman, but broke his back, leaving him crippled and wheelchair-bound. Helpless, Bruce Wayne left his costume and crime-fighting duties to Jean Peal Valley and set out on an arduous quest to regain his strength and will to fight. Eventually, after much rehabilitation and training with the beautiful but deadly Lady Shiva, Wayne returned to Gotham to reclaim the mantle of the Dark Knight.",
         image: '<img src="images/Bane.jpg"></img>',
       },
       { //Question 2
@@ -37,7 +37,7 @@ const store = {
           "Jack Kirby"
         ],
         correctAnswer: "Bob Kane",
-        caption: "Although he worked with Bill Finger on the original comics, Bob Kane is generally credited with creating the character of Batman. He was a twenty-two year old comic book artist when he was charged with the task of creating another superhero in the mold of the DC phenomenon, Superman. According to Kane, the original concept for Batman came from three sources: a Leonardo da Vinci sketch of a man trying to fly with bat-like wings, a 1930s movie titled (Italic) The Bat Whisperer, and the masked heroes of Zorro and The Shadow. Batman made his first appearance in (Italic) Detective Comics #27 (May, 1939).",
+        caption: "Although he worked with Bill Finger on the original comics, Bob Kane is generally credited with creating the character of Batman. He was a twenty-two year old comic book artist when he was charged with the task of creating another superhero in the mold of the DC phenomenon, Superman. According to Kane, the original concept for Batman came from three sources: a Leonardo da Vinci sketch of a man trying to fly with bat-like wings, a 1930s movie titled The Bat Whisperer, and the masked heroes of Zorro and The Shadow. Batman made his first appearance in Detective Comics #27 (May, 1939).",
         image: '<img src="images/Bob-Kane.jpg"></img>',
       },
       { //Question 4

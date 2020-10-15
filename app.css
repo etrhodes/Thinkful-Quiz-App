@@ -14,7 +14,7 @@
 body {
   background-image: url('images/batman-wallpaper.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 
