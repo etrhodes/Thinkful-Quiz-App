@@ -228,16 +228,14 @@ const store = {
     else {
       html = `
       <div>
-        <div>
+        <section>
           <h2>That is not correct.</h2>
           <p>The correct answer is ${store.questions[store.questionNumber].correctAnswer}.</p>
-        </div>
-        <div>
-          <p class="image">${store.questions[store.questionNumber].image}</p>
-        </div>
-        <div>
-          <p>${store.questions[store.questionNumber].caption}</p>
-        </div>
+        </section>
+        <section>
+          <div class="item image">${store.questions[store.questionNumber].image}</div>
+          <div class="item image">${store.questions[store.questionNumber].caption}</div>
+        </section>
       </div>
       `
     }
