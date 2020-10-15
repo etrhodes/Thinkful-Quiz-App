@@ -233,8 +233,10 @@ const store = {
           <p>The correct answer is ${store.questions[store.questionNumber].correctAnswer}.</p>
         </section>
         <section>
-          <div class="item image">${store.questions[store.questionNumber].image}</div>
-          <div class="item image">${store.questions[store.questionNumber].caption}</div>
+          <div class="group">
+            <div class="item">${store.questions[store.questionNumber].image}</div>
+            <div class="item">${store.questions[store.questionNumber].caption}</div>
+          </div>  
         </section>
       </div>
       `

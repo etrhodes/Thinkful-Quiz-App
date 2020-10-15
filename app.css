@@ -66,10 +66,6 @@ input {
   margin: 10px;
 }
 
-section .image {
-  width: 100%;
-}
-
 @media all and (min-width: 800px) {
   .group {
     flex-direction: row;
