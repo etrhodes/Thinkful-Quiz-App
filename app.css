@@ -75,3 +75,9 @@ input {
     margin: 5px;
   }
 }
+
+@media all and (max-width: 800px) {
+  .item img {
+    width: 100%;
+  }
+}

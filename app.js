@@ -218,8 +218,8 @@ const store = {
         </section>
         <section>
           <div class="group">
-            <div class="item image">${store.questions[store.questionNumber].image}</div>
-            <div class="item image">${store.questions[store.questionNumber].caption}</div>
+            <div class="item">${store.questions[store.questionNumber].image}</div>
+            <div class="item">${store.questions[store.questionNumber].caption}</div>
           </div>
         </section>
       </div>
