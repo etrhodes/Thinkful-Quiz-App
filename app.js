@@ -213,13 +213,15 @@ const store = {
     if (answerStatus === 'correct') {
       html = `
       <div>
-        <div>
-          <p>That is correct!</p>
-          <p class="image">${store.questions[store.questionNumber].image}</p>
-        </div>
-        <div>
-          <p>${store.questions[store.questionNumber].caption}</p>
-        </div>
+        <section>
+          <h2>That is correct!</h2>
+        </section>
+        <section>
+          <div class="group">
+            <div class="item image">${store.questions[store.questionNumber].image}</div>
+            <div class="item image">${store.questions[store.questionNumber].caption}</div>
+          </div>
+        </section>
       </div>
       `;
     }
@@ -227,7 +229,7 @@ const store = {
       html = `
       <div>
         <div>
-          <p>That is not correct.</p>
+          <h2>That is not correct.</h2>
           <p>The correct answer is ${store.questions[store.questionNumber].correctAnswer}.</p>
         </div>
         <div>
