@@ -171,15 +171,15 @@ const store = {
   return `
       <div>
         <p class="question-number"> Question ${i + 1} out of ${store.questions.length}</p>
-        <h2 class="question">${currentQuestion}</h2>
-        <form id="question-form">
-          <div class="answers">
-            ${generateAnswersHtml()}
-          </div>
-          <button id="submit-answer">Submit Answer</button>     
-        </form>
-        <div id="answer-div"></div>
-        <button id="next-question">Next Question</button>
+          <h2 class="question">${currentQuestion}</h2>
+            <form id="question-form">
+              <div class="answers">
+                ${generateAnswersHtml()}
+              </div>
+              <button id="submit-answer">Submit Answer</button>     
+            </form>
+            <div id="answer-div"></div>
+            <button id="next-question">Next Question</button>
         <p class="score">Score: ${store.score} out of ${store.questions.length}.</p>
       </div>
     `;
