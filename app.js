@@ -268,7 +268,6 @@ const store = {
       html = questionPage();
       $('main').html(html);
       $('#next-question').hide(true);
-      $('#submit-answer').attr('disabled', true);
     }
     else {
       $('main').html(quizFinished());
@@ -290,7 +289,7 @@ const store = {
   
   // This function handles the click of the "Submit Answer" button
   function submitAnswer() {
-    $('main').on('click', '#submit-answer', function (event) {
+    $('main').on('submit', 'form', function (event) {
       event.preventDefault();
   
     //Set variable for correct answer.
