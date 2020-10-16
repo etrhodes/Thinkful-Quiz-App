@@ -176,8 +176,7 @@ const store = {
           <div class="answers">
             ${generateAnswersHtml()}
           </div>
-          <button id="submit-answer">Submit Answer</button>
-          
+          <button id="submit-answer">Submit Answer</button>     
         </form>
         <div id="answer-div"></div>
         <button id="next-question">Next Question</button>
@@ -269,6 +268,7 @@ const store = {
       html = questionPage();
       $('main').html(html);
       $('#next-question').hide(true);
+      $('#submit-answer').attr('disabled', true);
     }
     else {
       $('main').html(quizFinished());
@@ -300,7 +300,6 @@ const store = {
 
     //Grab value of selected answer.
     let selectedAnswer = $('input[value]:checked').val();
-    
   
     if (selectedAnswer === currentAnswer.correctAnswer) {
       $('#answer-div').append(questionHtml('correct'));
