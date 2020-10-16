@@ -77,6 +77,14 @@ body {
   .item {
     margin: 5px;
   }
+
+  * {
+    text-align: center;
+  }
+
+  #question-form input {
+    vertical-align: middle;
+  }
 }
 
 @media all and (max-width: 800px) {
