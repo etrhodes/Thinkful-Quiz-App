@@ -78,9 +78,15 @@ body {
     margin: 5px;
   }
 
-  h1, h2, div {
+  h1, h2, form {
+    text-align: center;
+    align-content: center;
+  }
+
+  * {
     text-align: center;
   }
+
 }
 
 @media all and (max-width: 800px) {

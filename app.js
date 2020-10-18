@@ -157,7 +157,7 @@ const store = {
   function beginQuiz() {
   return `
     <div class="begin-quiz">
-        <p>Welcome to Gotham. Begin quiz by pressing the button.</p>
+        <h2>Welcome to Gotham. Begin quiz by pressing the button.</h2>
         <button id="begin-quiz">Begin Quiz</button>
     </div>
     `
@@ -169,8 +169,8 @@ const store = {
     let currentQuestion = store.questions[i].question;
     console.log(currentQuestion);
   return `
-      <div>
-        <p class="question-number"> Question ${i + 1} out of ${store.questions.length}</p>
+      <div class="question-total">
+        <h2 class="question-number"> Question ${i + 1} out of ${store.questions.length}</h2>
           <h2 class="question">${currentQuestion}</h2>
             <form id="question-form">
               <div class="answers">
@@ -180,7 +180,7 @@ const store = {
             </form>
             <div id="answer-div"></div>
             <button id="next-question">Next Question</button>
-        <p class="score">Score: ${store.score} out of ${store.questions.length}.</p>
+        <h2 class="score">Score: ${store.score} out of ${store.questions.length}.</h2>
       </div>
     `;
   }
